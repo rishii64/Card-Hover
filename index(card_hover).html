@@ -1,0 +1,136 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css" integrity="sha512-iecdLmaskl7CVkqkXNQ/ZH/XLlvWZOJyj7Yy7tcenmpD1ypASozpmT/E0iPtmFIB46ZmdtAc9eNBvH0H/ZpiBw==" crossorigin="anonymous" referrerpolicy="no-referrer" />
+    <style>
+        *{
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+        body{
+            height: 97vh;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+        }
+        .card{
+            width: 300px;
+            height: 350px;
+            background-color: beige;
+            /* border: 1px solid rgb(234, 234, 162); */
+            border-radius: 20px;
+            z-index: 2;
+        }
+        .main_card:hover .cA{
+            cursor: pointer;
+            box-shadow: 0px 5px 15px;
+        }
+        .fa-solid{
+            font-size: 35px;
+            color: rgba(255, 255, 255, 0.88);
+        }
+        .head{
+            height: 80px;
+            border-radius: 20px 20px 0px 0px;
+            background-color: rgb(96, 70, 180);
+            box-shadow: 0px 2px 3px rgb(8, 42, 70);
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            font-size: 30px;
+            font-weight: 900;
+            font-family: cursive;
+            color: rgb(249, 249, 249);
+        }
+        .body{
+            background-color: beige;
+            font-family: 'Arial';
+        }
+        .body,li{
+            margin: 20px 0px 0px 20px;
+            font-family: Calibri;
+        }
+        .c1,.c2,.c3,.c4{
+            position: absolute;
+            z-index:-1;
+            width: 250px;
+            height: 300px;
+            padding: 10px;
+            /* border: 1px solid red; */
+            bottom: 170px;
+            left: 525px;
+            transition: 1s;
+            background-color: rgb(239, 247, 205);
+        }
+        .c2,.c3{
+            text-align: end;
+        }
+        .main_card:hover .c1{
+            transform: translate(-80px,-100px) rotate(-10deg);
+            opacity: .9;
+        }
+        .main_card:hover .c2{
+            transform: translate(100px,-90px);
+            opacity: .8;
+        }
+        .main_card:hover .c3{
+            transform: translate(170px,80px) rotate(10deg);
+            opacity: .9;
+        }
+        .main_card:hover .c4{
+            transform: translate(-190px,80px) rotate(-20deg);
+            opacity: .8;
+        }
+        .emoji{
+            font-size: 30px;
+            position: absolute;
+            bottom: 300px;
+            right: 630px;
+            transition: 2s;
+            transition-delay: 2s;
+            opacity: 0;
+        }
+        .main_card:hover .emoji{
+            transform: scale(10);
+            opacity: 1;
+        }
+
+        body{
+        min-height:100vh;
+        margin:0;
+        background-image: repeating-linear-gradient(135deg,
+            #2B3284, #2B3284 100px, 
+            #4177BC 100px, #4177BC 105px, 
+            #2B3284 105px, #2B3284 130px, 
+            #4177BC 130px, #4177BC 260px, 
+            #FFFFFF 260px, #FFFFFF 265px, 
+            #4177BC 265px, #4177BC 270px, 
+            #FFFFFF 270px, #FFFFFF 330px );
+        }
+    </style>
+</head>
+<body>
+    <div class="main_card">
+        <div class="card cA">
+            <div class="head">
+                <i class="fa-solid fa-note-sticky"></i>&nbsp;&nbsp;NOTES
+            </div>
+            <div class="body">
+                <li>list items</li>
+                <li>list items</li>
+                <li>list items</li>
+                <li>list items</li>
+            </div>
+            <div class="card c1"><h1>EAT 🍴</h1></div>
+            <div class="card c2"><h1>SLEEP 😴</h1></div>
+            <div class="card c3"><h1>CODE 👨‍💻</h1></div>
+            <div class="card c4"><h1>REPEAT 🔁</h1></div>
+            <div class="emoji">👍</div>
+        </div>
+    </div>
+</body>
+</html>
